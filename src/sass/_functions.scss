@@ -1,0 +1,13 @@
+//sets the color depending on the background color scheme
+//set the $lighter to primary light and darker to primary dark
+//or smth)
+@function set-text-color($col, $darker: #000, $lighter: #fff) {
+  @if(lightness($col) > 50) {
+    @return $darker; 
+  }
+  @else {
+    @return $lighter;
+  }
+}
+
+//next

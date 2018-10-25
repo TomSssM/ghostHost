@@ -16,7 +16,7 @@ header {
   background-size: cover;
   position: relative;
 
-  & .container > *, & > * {
+  .container > *, & > * {
     position: relative;
     z-index: 999;
   }
@@ -34,7 +34,7 @@ header {
     border-bottom: $discrepancy solid #29292b;
     @extend %heightFix;
 
-    & .logo {
+    .logo {
       height: em(40);
       width: em(120);
       float: left;
@@ -45,15 +45,15 @@ header {
       margin-top: (em(40) * (-1)) / 2;
     }
 
-    & ul.main {
+    ul.main {
       float: right;
       width: 60%;
       
-      & li {
+      li {
         @include liThings(6);
         margin-bottom: $discrepancy * (-1);
 
-        & a {
+        a {
           font-size: .8em;
           font-family: $primaryFontFamilyRegular;
           display: block;
@@ -94,13 +94,13 @@ header {
     padding: 17rem 0;
     text-align: center;
 
-    & .motto {
+    .motto {
       font-size: 3.4rem;
       line-height: 4.7rem;
       font-family: $primaryFontFamilyBold;
     }
   
-    & .motto--italic {
+    .motto--italic {
       font-size: 1.2rem;
       line-height: 2rem;
       font-family: $primaryFontFamilyItalic;

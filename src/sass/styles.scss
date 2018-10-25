@@ -1,6 +1,8 @@
 @import "./functions";
 @import "./mixinsAndPlaceholders";
-@import "./variables";
+@import "./variablesAndFont";
+
+
 * {
   box-sizing: border-box;
 }
@@ -30,15 +32,28 @@ header {
     margin-bottom: 200px; // task
     @extend %heightFix;
 
+    & .logo {
+      height: em(40);
+      width: em(120);
+      float: left;
+      background: url("../../images/headerLogo.png") no-repeat center center;
+      background-size: 100% auto;
+      position: absolute;
+      top: 50%;
+      margin-top: (em(40) * (-1)) / 2;
+    }
+
     & ul.main {
       float: right;
       width: 60%;
-
+      
       & li {
         @include liThings(6);
         margin-bottom: $discrepancy * (-1);
 
         & a {
+          font-size: .8em;
+          font-family: "latoregular", 'Courier New', Courier, monospace;
           display: block;
           position: relative;
           float: right;

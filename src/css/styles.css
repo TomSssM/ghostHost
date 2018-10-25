@@ -44,12 +44,30 @@ header nav ul.main li {
 }
 header nav ul.main li a {
   display: block;
+  position: relative;
   float: right;
   width: auto;
   padding: 2.1875em 0;
   text-align: right;
   color: #fff;
-  border-bottom: 1px solid #fff;
+}
+header nav ul.main li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  left: 50%;
+  transition: all .2s ease-out;
+  background: #fff;
+  height: 1px;
+}
+header nav ul.main li a.active:before {
+  left: 0;
+  width: 100%;
+}
+header nav ul.main li a:hover:before {
+  width: 100%;
+  left: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

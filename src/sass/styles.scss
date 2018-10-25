@@ -40,12 +40,33 @@ header {
 
         & a {
           display: block;
+          position: relative;
           float: right;
           width: auto;
           padding: em(35) 0;
           text-align: right;
           color: #fff;
-          border-bottom: $discrepancy solid #fff;
+          
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            left: 50%;
+            transition: all .2s ease-out;
+            background: #fff;
+            height: $discrepancy;
+          }
+
+          &.active:before {
+            left: 0;
+            width: 100%;
+          }
+
+          &:hover:before {
+            width: 100%;
+            left: 0;
+          }
         }
       }
     }

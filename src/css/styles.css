@@ -1,4 +1,4 @@
-header nav:after {
+header nav:after, .registerPad:after {
   content: "";
   display: block;
   clear: both;
@@ -37,7 +37,7 @@ header {
   background-size: cover;
   position: relative;
 }
-header .container > * {
+header .container > *, header > * {
   position: relative;
   z-index: 999;
 }
@@ -114,6 +114,17 @@ header .wrapper .motto--italic {
   font-size: 1.2rem;
   line-height: 2rem;
   font-family: "latoitalic", "Courier New", Courier, monospace;
+}
+
+.registerPad > * {
+  width: 50%;
+  float: left;
+}
+.registerPad .login {
+  background: yellow;
+}
+.registerPad .register {
+  background: orange;
 }
 
 /*# sourceMappingURL=styles.css.map */

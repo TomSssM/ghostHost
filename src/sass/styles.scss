@@ -16,6 +16,11 @@ header {
   background-size: cover;
   position: relative;
 
+  & .container > * {
+    position: relative;
+    z-index: 999;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -27,9 +32,6 @@ header {
 
   nav {
     border-bottom: $discrepancy solid #29292b;
-    position: relative;
-    z-index: 999;
-    margin-bottom: 200px; // task
     @extend %heightFix;
 
     & .logo {
@@ -53,7 +55,7 @@ header {
 
         & a {
           font-size: .8em;
-          font-family: "latoregular", 'Courier New', Courier, monospace;
+          font-family: $primaryFontFamilyRegular;
           display: block;
           position: relative;
           float: right;
@@ -84,6 +86,24 @@ header {
           }
         }
       }
+    }
+  }
+
+  .wrapper {
+    color: #fff;
+    padding: 17rem 0;
+    text-align: center;
+
+    & .motto {
+      font-size: 3.4rem;
+      line-height: 4.7rem;
+      font-family: $primaryFontFamilyBold;
+    }
+  
+    & .motto--italic {
+      font-size: 1.2rem;
+      line-height: 2rem;
+      font-family: $primaryFontFamilyItalic;
     }
   }
 }

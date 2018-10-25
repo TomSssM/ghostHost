@@ -3,6 +3,10 @@
   -webkit-transition: $val;
   transition: $val;
 }
+@mixin liThings($n) {
+  width: 100% / $n;
+  float: left;        
+}
 
 //placeholders
 %flexCenter {
@@ -19,4 +23,11 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
           justify-content: center;
+}
+%heightFix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }

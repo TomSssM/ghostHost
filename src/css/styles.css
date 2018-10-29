@@ -129,13 +129,14 @@ header .wrapper .motto--subheader {
   transform: none;
 }
 .registerPad li.login a {
-  background: yellow;
+  background: #21424a;
 }
 .registerPad li.register a {
-  background: orange;
+  background: #2fac6c;
 }
 .registerPad li.register a p {
   transform: skewX(20deg);
+  margin-left: 0;
 }
 .registerPad li a {
   display: block;
@@ -145,8 +146,12 @@ header .wrapper .motto--subheader {
   background: blue;
 }
 .registerPad li a p {
-  width: 50%;
+  width: 30%;
   text-align: center;
+  margin-left: 20%;
+  font-family: "latobold", "Courier New", Courier, monospace;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */

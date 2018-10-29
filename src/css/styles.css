@@ -110,21 +110,43 @@ header .wrapper .motto {
   line-height: 4.7rem;
   font-family: "latobold", "Courier New", Courier, monospace;
 }
-header .wrapper .motto--italic {
+header .wrapper .motto--subheader {
   font-size: 1.2rem;
   line-height: 2rem;
   font-family: "latoitalic", "Courier New", Courier, monospace;
 }
 
-.registerPad > * {
-  width: 50%;
-  float: left;
+.registerPad {
+  overflow: hidden;
 }
-.registerPad .login {
+.registerPad li {
+  width: 100%;
+  margin-right: -50%;
+  float: left;
+  transform: skewX(-20deg);
+}
+.registerPad li.login {
+  transform: none;
+}
+.registerPad li.login a {
   background: yellow;
 }
-.registerPad .register {
+.registerPad li.register a {
   background: orange;
+}
+.registerPad li.register a p {
+  transform: skewX(20deg);
+}
+.registerPad li a {
+  display: block;
+  padding: 2.4rem 0;
+}
+.registerPad li a:hover {
+  background: blue;
+}
+.registerPad li a p {
+  width: 50%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

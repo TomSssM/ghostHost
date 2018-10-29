@@ -131,11 +131,17 @@ header .wrapper .motto--subheader {
 .registerPad li.login a {
   background: #21424a;
 }
+.registerPad li.login a:hover {
+  background: #2c5863;
+}
 .registerPad li.login a:before {
   transform: skewX(-20deg);
 }
 .registerPad li.register a {
   background: #2fac6c;
+}
+.registerPad li.register a:hover {
+  background: #37c87e;
 }
 .registerPad li.register a p {
   transform: skewX(20deg);

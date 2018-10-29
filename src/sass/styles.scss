@@ -124,6 +124,10 @@ header {
       a {
         background: #21424a;
 
+        &:hover {
+          background: lighten(#21424a, 7%);
+        }
+
         &:before {
           transform: skewX(-20deg);
         }
@@ -134,6 +138,10 @@ header {
 
       a {
         background: #2fac6c;
+
+        &:hover {
+          background: lighten(#2fac6c, 7%);
+        }
 
         p {
           transform: skewX(20deg);

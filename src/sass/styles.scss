@@ -123,6 +123,10 @@ header {
 
       a {
         background: #21424a;
+
+        &:before {
+          transform: skewX(-20deg);
+        }
       }
     }
 
@@ -141,9 +145,23 @@ header {
     a {
       display: block;
       padding: 2.4rem 0;
-  
-      &:hover {
-        background: blue;
+      position: relative;
+      overflow: hidden;
+      transition: all .3s;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        background: linear-gradient(to right, #ffffff00, #ffffff56, #ffffff00);
+        top: 0;
+        left: 60%;
+      }
+
+      &:hover:before {
+        left: -100%;
+        transition: all .7s ease-out;
       }
   
       p {
@@ -155,6 +173,8 @@ header {
         font-family: $primaryFontFamilyBold;
         color: #fff;
         text-transform: uppercase;
+        position: relative;
+        z-index: 999;
       }
     }
   }

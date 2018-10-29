@@ -131,6 +131,9 @@ header .wrapper .motto--subheader {
 .registerPad li.login a {
   background: #21424a;
 }
+.registerPad li.login a:before {
+  transform: skewX(-20deg);
+}
 .registerPad li.register a {
   background: #2fac6c;
 }
@@ -141,9 +144,22 @@ header .wrapper .motto--subheader {
 .registerPad li a {
   display: block;
   padding: 2.4rem 0;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
 }
-.registerPad li a:hover {
-  background: blue;
+.registerPad li a:before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, #ffffff00, #ffffff56, #ffffff00);
+  top: 0;
+  left: 60%;
+}
+.registerPad li a:hover:before {
+  left: -100%;
+  transition: all .7s ease-out;
 }
 .registerPad li a p {
   width: 30%;
@@ -152,6 +168,8 @@ header .wrapper .motto--subheader {
   font-family: "latobold", "Courier New", Courier, monospace;
   color: #fff;
   text-transform: uppercase;
+  position: relative;
+  z-index: 999;
 }
 
 /*# sourceMappingURL=styles.css.map */

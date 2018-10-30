@@ -169,6 +169,7 @@ header {
         top: 0;
         left: 60%;
       }
+      //task fix the fuzziness for mozilla
 
       &:hover:before {
         left: -100%;
@@ -184,8 +185,6 @@ header {
         font-family: $primaryFontFamilyBold;
         color: #fff;
         text-transform: uppercase;
-        position: relative;
-        z-index: 999;
       }
     }
   }
@@ -209,7 +208,7 @@ header {
 
   form {
     width: 100%;
-    border: 1px solid #d9d9d9;
+    border: $primaryBorder;
     margin: 2rem 0;
     display: flex;
     flex-flow: row nowrap;
@@ -264,8 +263,60 @@ header {
     }
   }
 
-  // .table {
+  .table {
+    border: $primaryBorder;
+    padding: .7rem 1.2rem;
 
-  // }
+    .row {
+      @extend %heightFix;
+
+      .cell {
+        @include liThings(4);
+        color: $primaryColor;
+        font-family: $primaryFontFamilyRegular;
+        padding: 1.7rem 0 2rem 0;
+        border-right: $primaryBorder;
+        @include transition(.2s);
+        cursor: default;
+        font-size: .91rem;
+
+        &:hover {
+          color: darken($primaryColor, 30%);
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      &:nth-child(1) {
+        .cell {
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            background: #fff;
+            width: $lilSquare;            
+            height: $lilSquare;
+            right: $lilSquare / 2 * (-1);
+            bottom: $lilSquare / 2 * (-1);         
+          }
+        }
+        .cell:last-child {
+          &:before {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .cell {
+          border-top: $primaryBorder;
+          margin-top: -.5px;
+        }
+      }
+    }
+  }
 }
 //sass --watch sass:css --style expanded

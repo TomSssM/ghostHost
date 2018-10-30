@@ -44,7 +44,14 @@
     <div class="container--half">
       <h2>Would you like to buy a new domain?</h2>
       <p>Dolore aliquyam ipsum nonumy ipsum justo dolor duo dolore et. Isum justo dolor duo dolore et.</p>
-      <form action=""></form>
+      <form name="domaincreator" method="POST" target="_blank" enctype="text/plain" action="./someFile.php">
+        <input type="text" name="3W" id="threeW" value="www." readonly>
+        <input type="text" name="domain" id="domainName" placeholder="What do you want?">
+        <select name="host" id="host">
+          <option value=".com">.com</option>
+          <option value=".net">.net</option>
+        </select>
+      </form>
       <div class="table">
         <div class="row">
           <div class="cell"></div>

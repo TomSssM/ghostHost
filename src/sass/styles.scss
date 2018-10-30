@@ -207,7 +207,64 @@ header {
     margin-bottom: .7rem;
   }
 
-  // form {
+  form {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    // @include transition(.2s, ease-out);
+
+    ::placeholder {
+      opacity: 1;
+      @include transition(.2s);
+    }
+    :focus::placeholder {
+      opacity: 0;
+    }
+
+    & > * {
+      outline: none;
+    }
+
+    input, select {
+      padding: .6rem 0;
+      text-align: center;
+      border: none;
+      font-family: $primaryFontFamilyRegular;
+      color: #a2a2a2;
+    }
+
+    input[name="domain"] {
+      text-align: left;
+      color: #a6a6a6;
+      font-family: $primaryFontFamilyBold;
+      flex: 1;
+      padding: .4rem 1rem;
+      margin: .2rem 0;
+      border: 1px solid #d9d9d9;
+      border-color: transparent #d9d9d9;
+
+      // &:focus form {
+      //   border-color: darken(#d9d9d9, 30%);
+      // }
+      //task ^^^
+      //add onclick events
+    }
+
+    input[name="3W"] {
+      width: 4rem;
+      float: left;
+    }
+
+    select {
+      width: 4rem;
+      float: right;
+      padding: .54rem 0;
+    }
+  }
+
+  // .table {
 
   // }
 }

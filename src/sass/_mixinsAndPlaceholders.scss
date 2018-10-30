@@ -1,7 +1,7 @@
 //mixins
-@mixin transition($val) {
-  -webkit-transition: $val;
-  transition: $val;
+@mixin transition($val, $timing: ease-in-out) {
+  -webkit-transition: all $val $timing;
+  transition: all $val $timing;
 }
 @mixin liThings($n) {
   width: 100% / $n;

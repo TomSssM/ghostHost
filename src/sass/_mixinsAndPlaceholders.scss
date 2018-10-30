@@ -9,6 +9,14 @@
   float: left;
   width: (100% / $nL) - $sp;
   margin: 0 ((($sp * $nL) / $nS) * 1%);
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 //placeholders

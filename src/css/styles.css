@@ -1,4 +1,4 @@
-header nav:after, .registerPad:after, .table-block .table .row:after {
+header nav:after, .registerPad:after, .table-block .table .row:after, .packages-block ul:after {
   content: "";
   display: block;
   clear: both;
@@ -193,7 +193,7 @@ header .wrapper .motto--subheader {
 }
 
 .table-block {
-  padding: 3.4rem 0;
+  padding: 4.3rem 0;
   font-family: "latoregular", "Courier New", Courier, monospace;
   text-align: center;
 }
@@ -291,6 +291,48 @@ header .wrapper .motto--subheader {
 .table-block .table .row:nth-child(2) .cell {
   border-top: 1px solid #d9d9d9;
   margin-top: -.5px;
+}
+
+.packages-block {
+  background: url("../../images/packagesBG.jpg") no-repeat 0 -12rem;
+  background-size: 100% auto;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.packages-block:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 50%;
+  background: #fff;
+  z-index: 0;
+}
+.packages-block ul {
+  position: relative;
+  z-index: 9999;
+}
+.packages-block ul li {
+  width: 24%;
+  float: left;
+  margin: 0 0.6666666667%;
+}
+.packages-block ul li:first-child {
+  margin-left: 0;
+}
+.packages-block ul li:last-child {
+  margin-right: 0;
+}
+.packages-block ul li a {
+  display: block;
+  background: blue;
+  padding: 13rem 0;
+  text-align: center;
+}
+.packages-block ul li a:hover {
+  background: orange;
 }
 
 /*# sourceMappingURL=styles.css.map */

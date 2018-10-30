@@ -83,8 +83,9 @@ header nav ul.main {
   width: 60%;
 }
 header nav ul.main li {
-  width: 16.6666666667%;
   float: left;
+  width: 16.6666666667%;
+  margin: 0 0%;
   margin-bottom: -1px;
 }
 header nav ul.main li a {
@@ -256,8 +257,9 @@ header .wrapper .motto--subheader {
   padding: .7rem 1.2rem;
 }
 .table-block .table .row .cell {
-  width: 25%;
   float: left;
+  width: 25%;
+  margin: 0 0%;
   color: #d9d9d9;
   font-family: "latoregular", "Courier New", Courier, monospace;
   padding: 1.7rem 0 2rem 0;
@@ -315,9 +317,9 @@ header .wrapper .motto--subheader {
   z-index: 9999;
 }
 .packages-block ul li {
-  width: 24%;
   float: left;
-  margin: 0 0.6666666667%;
+  width: 22%;
+  margin: 0 2%;
 }
 .packages-block ul li:first-child {
   margin-left: 0;

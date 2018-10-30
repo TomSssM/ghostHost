@@ -53,7 +53,7 @@ header {
       width: 60%;
       
       li {
-        @include liThings(6);
+        @include tomsPerfectLiPosi(6);
         margin-bottom: $discrepancy * (-1);
 
         a {
@@ -271,7 +271,7 @@ header {
       @extend %heightFix;
 
       .cell {
-        @include liThings(4);
+        @include tomsPerfectLiPosi(4);
         color: $primaryColor;
         font-family: $primaryFontFamilyRegular;
         padding: 1.7rem 0 2rem 0;
@@ -343,9 +343,7 @@ header {
     z-index: 9999;
 
     li {
-      width: 24%;
-      float: left;
-      margin: 0 (4% / 6);
+      @include tomsPerfectLiPosi(4, 3);
 
       &:first-child {
         margin-left: 0;

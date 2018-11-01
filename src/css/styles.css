@@ -88,6 +88,12 @@ header nav ul.main li {
   margin: 0 0%;
   margin-bottom: -1px;
 }
+header nav ul.main li:first-child {
+  margin-left: 0;
+}
+header nav ul.main li:last-child {
+  margin-right: 0;
+}
 header nav ul.main li a {
   font-size: .8em;
   font-family: "latoregular", "Courier New", Courier, monospace;
@@ -269,6 +275,12 @@ header .wrapper .motto--subheader {
   cursor: default;
   font-size: .91rem;
 }
+.table-block .table .row .cell:first-child {
+  margin-left: 0;
+}
+.table-block .table .row .cell:last-child {
+  margin-right: 0;
+}
 .table-block .table .row .cell:hover {
   color: #8d8d8d;
 }
@@ -327,14 +339,47 @@ header .wrapper .motto--subheader {
 .packages-block ul li:last-child {
   margin-right: 0;
 }
+.packages-block ul li:first-child {
+  margin-left: 0;
+}
+.packages-block ul li:last-child {
+  margin-right: 0;
+}
+.packages-block ul li:nth-child(1) a {
+  border-top: 7px solid #f9d423;
+}
+.packages-block ul li:nth-child(1) a .icon {
+  width: 3rem;
+  height: 3rem;
+  background: #f9d423;
+  margin: auto;
+  border-radius: 700px;
+  overflow: hidden;
+  position: relative;
+}
+.packages-block ul li:nth-child(1) a .icon:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+}
+.packages-block ul li:nth-child(2) a {
+  border-top: 7px solid #7f8c8d;
+}
+.packages-block ul li:nth-child(3) a {
+  border-top: 7px solid #f85f40;
+}
+.packages-block ul li:nth-child(4) a {
+  border-top: 7px solid #1abc9c;
+}
 .packages-block ul li a {
   display: block;
-  background: blue;
-  padding: 13rem 0;
   text-align: center;
-}
-.packages-block ul li a:hover {
-  background: orange;
+  padding: 1.2rem 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

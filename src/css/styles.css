@@ -347,11 +347,16 @@ header .wrapper .motto--subheader {
 .packages-block ul li:nth-child(1) a .icon {
   width: 3rem;
   height: 3rem;
-  background: #f9d423;
   margin: auto;
-  border-radius: 700px;
   overflow: hidden;
   position: relative;
+}
+.packages-block ul li:nth-child(1) a .icon .wrapper {
+  width: 100%;
+  height: 100%;
+  background: #f9d423;
+  border-radius: 100px;
+  position: absolute;
 }
 .packages-block ul li:nth-child(1) a .icon:before, .packages-block ul li:nth-child(1) a .icon:after {
   content: "";
@@ -403,6 +408,47 @@ header .wrapper .motto--subheader {
   left: auto;
   top: 50%;
   margin-top: -0.175rem;
+}
+.packages-block ul li:nth-child(1) a h3 {
+  text-transform: uppercase;
+  line-height: 2.6rem;
+  border-bottom: 1px solid #bebebe;
+  font-family: "latobold", "Courier New", Courier, monospace;
+}
+.packages-block ul li:nth-child(1) a .info {
+  border-bottom: 1px solid #bebebe;
+}
+.packages-block ul li:nth-child(1) a .info p {
+  margin: 1rem 0;
+  text-align: left;
+  color: #bebebe;
+}
+.packages-block ul li:nth-child(1) a .info p span {
+  color: #f9d423;
+  float: right;
+}
+.packages-block ul li:nth-child(1) a p.price {
+  padding: 1.39rem 0 .3rem 0;
+  font-family: "latobold", "Courier New", Courier, monospace;
+  font-size: 1.39rem;
+}
+.packages-block ul li:nth-child(1) a p.price .dollar {
+  font-size: 1rem;
+  vertical-align: top;
+}
+.packages-block ul li:nth-child(1) a p.price .mon {
+  font-family: "latoregular", "Courier New", Courier, monospace;
+  color: #8d8d8d;
+  font-size: .8rem;
+  vertical-align: bottom;
+}
+.packages-block ul li:nth-child(1) a .select {
+  font-family: "latobold", "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  padding: 1rem 0 1.8rem;
+  border-top: 2.8px solid #f9d423;
+  width: 60%;
+  margin: auto;
 }
 .packages-block ul li a {
   display: block;

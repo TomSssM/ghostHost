@@ -354,11 +354,19 @@ header {
           .icon {
             width: $PackagesIcon;
             height: $PackagesIcon;
-            background: $packagesYellow;
+            // background: $packagesYellow;
             margin: auto;
-            border-radius: 700px;
+            // border-radius: 700px;
             overflow: hidden;
             position: relative;
+
+            .wrapper {
+              width: 100%;
+              height: 100%;
+              background: $packagesYellow;
+              border-radius: 100px;
+              position: absolute;
+            }
             
             &:before, &:after {
               content: "";
@@ -418,54 +426,54 @@ header {
             }
           }
 
-          // h3 {
-          //   text-transform: uppercase;
-          //   line-height: 2.6rem;
-          //   border-bottom: $primaryBorder;
-          //   font-family: $primaryFontFamilyBold;
-          // }
+          h3 {
+            text-transform: uppercase;
+            line-height: 2.6rem;
+            border-bottom: $primaryBorder;
+            font-family: $primaryFontFamilyBold;
+          }
 
-          // .info {
-          //   border-bottom: $primaryBorder;
+          .info {
+            border-bottom: $primaryBorder;
 
-          //   p {
-          //     margin: 1rem 0;
-          //     text-align: left;
-          //     color: $primaryColor;
+            p {
+              margin: 1rem 0;
+              text-align: left;
+              color: $primaryColor;
 
-          //     span {
-          //       color: $packagesYellow;
-          //       float: right;
-          //     }
-          //   }
-          // }
+              span {
+                color: $packagesYellow;
+                float: right;
+              }
+            }
+          }
 
-          // p.price {
-          //   padding: 1.39rem 0 .3rem 0;
-          //   font-family: $primaryFontFamilyBold;
-          //   font-size: 1.39rem;
+          p.price {
+            padding: 1.39rem 0 .3rem 0;
+            font-family: $primaryFontFamilyBold;
+            font-size: 1.39rem;
 
-          //   .dollar {
-          //     font-size: 1rem;
-          //     vertical-align: top;
-          //   }
+            .dollar {
+              font-size: 1rem;
+              vertical-align: top;
+            }
 
-          //   .mon {
-          //     font-family: $primaryFontFamilyRegular;
-          //     color: #8d8d8d;
-          //     font-size: .8rem;
-          //     vertical-align: bottom;
-          //   }
-          // }
+            .mon {
+              font-family: $primaryFontFamilyRegular;
+              color: #8d8d8d;
+              font-size: .8rem;
+              vertical-align: bottom;
+            }
+          }
 
-          // .select {
-          //   font-family: $primaryFontFamilyBold;
-          //   text-transform: uppercase;
-          //   padding: 1rem 0 1.8rem;
-          //   border-top: 2.8px solid $packagesYellow;
-          //   width: 60%;
-          //   margin: auto;
-          // }
+          .select {
+            font-family: $primaryFontFamilyBold;
+            text-transform: uppercase;
+            padding: 1rem 0 1.8rem;
+            border-top: 2.8px solid $packagesYellow;
+            width: 60%;
+            margin: auto;
+          }
         }
       }
 

@@ -235,7 +235,7 @@ header {
 
     input[name="domain"] {
       text-align: left;
-      color: #a6a6a6;
+      color: #b4b4b4;
       font-family: $primaryFontFamilyBold;
       flex: 1;
       padding: .4rem 1rem;
@@ -346,10 +346,9 @@ header {
       background: #fff;
       box-shadow: 0px 2px 8px -2px darken($primaryColor, 40%);
       @include transition(.1s);
-      transform: scale(.98);
 
       &:hover {
-        transform: scale(1);
+        transform: scale(1.02);
       }
 
       &:nth-child(1) {

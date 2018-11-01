@@ -241,7 +241,7 @@ header .wrapper .motto--subheader {
 }
 .table-block form input[name="domain"] {
   text-align: left;
-  color: #a6a6a6;
+  color: #b4b4b4;
   font-family: "latobold", "Courier New", Courier, monospace;
   flex: 1;
   padding: .4rem 1rem;
@@ -336,7 +336,6 @@ header .wrapper .motto--subheader {
   box-shadow: 0px 2px 8px -2px #585858;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  transform: scale(0.98);
 }
 .packages-block ul li:first-child {
   margin-left: 0;
@@ -345,7 +344,7 @@ header .wrapper .motto--subheader {
   margin-right: 0;
 }
 .packages-block ul li:hover {
-  transform: scale(1);
+  transform: scale(1.02);
 }
 .packages-block ul li:nth-child(1) a {
   border-top: 4px solid #f9d423;

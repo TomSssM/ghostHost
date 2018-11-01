@@ -216,7 +216,7 @@ header .wrapper .motto--subheader {
 }
 .table-block form {
   width: 100%;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #bebebe;
   margin: 2rem 0;
   display: flex;
   flex-flow: row nowrap;
@@ -259,17 +259,17 @@ header .wrapper .motto--subheader {
   padding: .54rem 0;
 }
 .table-block .table {
-  border: 1px solid #d9d9d9;
+  border: 1px solid #bebebe;
   padding: .7rem 1.2rem;
 }
 .table-block .table .row .cell {
   float: left;
   width: 25%;
   margin: 0 0%;
-  color: #d9d9d9;
+  color: #bebebe;
   font-family: "latoregular", "Courier New", Courier, monospace;
   padding: 1.7rem 0 2rem 0;
-  border-right: 1px solid #d9d9d9;
+  border-right: 1px solid #bebebe;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   cursor: default;
@@ -282,7 +282,7 @@ header .wrapper .motto--subheader {
   margin-right: 0;
 }
 .table-block .table .row .cell:hover {
-  color: #8d8d8d;
+  color: #727272;
 }
 .table-block .table .row .cell:last-child {
   border-right: none;
@@ -303,7 +303,7 @@ header .wrapper .motto--subheader {
   display: none;
 }
 .table-block .table .row:nth-child(2) .cell {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid #bebebe;
   margin-top: -.5px;
 }
 
@@ -332,12 +332,8 @@ header .wrapper .motto--subheader {
   float: left;
   width: 22%;
   margin: 0 2%;
-}
-.packages-block ul li:first-child {
-  margin-left: 0;
-}
-.packages-block ul li:last-child {
-  margin-right: 0;
+  background: #fff;
+  box-shadow: 0px 0px 7px 0px #dbdbdb;
 }
 .packages-block ul li:first-child {
   margin-left: 0;
@@ -346,7 +342,7 @@ header .wrapper .motto--subheader {
   margin-right: 0;
 }
 .packages-block ul li:nth-child(1) a {
-  border-top: 7px solid #f9d423;
+  border-top: 4px solid #f9d423;
 }
 .packages-block ul li:nth-child(1) a .icon {
   width: 3rem;
@@ -357,7 +353,7 @@ header .wrapper .motto--subheader {
   overflow: hidden;
   position: relative;
 }
-.packages-block ul li:nth-child(1) a .icon:before {
+.packages-block ul li:nth-child(1) a .icon:before, .packages-block ul li:nth-child(1) a .icon:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -367,19 +363,51 @@ header .wrapper .motto--subheader {
   background: #fff;
   z-index: 2;
 }
-.packages-block ul li:nth-child(2) a {
-  border-top: 7px solid #7f8c8d;
+.packages-block ul li:nth-child(1) a .icon:after {
+  width: 100%;
+  top: 50%;
 }
-.packages-block ul li:nth-child(3) a {
-  border-top: 7px solid #f85f40;
+.packages-block ul li:nth-child(1) a .icon .icon--small {
+  width: 2.3rem;
+  height: 2.3rem;
+  background: #fff;
+  margin: 0.35rem;
+  border-radius: 700px;
+  position: relative;
 }
-.packages-block ul li:nth-child(4) a {
-  border-top: 7px solid #1abc9c;
+.packages-block ul li:nth-child(1) a .icon .icon--small i {
+  color: #f9d423;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.5rem;
+  margin-left: -0.5rem;
+  z-index: 99;
+}
+.packages-block ul li:nth-child(1) a .icon .icon--small:before, .packages-block ul li:nth-child(1) a .icon .icon--small:after {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 700px;
+  background: #f9d423;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  margin-left: -0.175rem;
+  top: -0.35rem;
+}
+.packages-block ul li:nth-child(1) a .icon .icon--small:after {
+  right: -0.35rem;
+  left: auto;
+  top: 50%;
+  margin-top: -0.175rem;
 }
 .packages-block ul li a {
   display: block;
   text-align: center;
-  padding: 1.2rem 1rem;
+  padding: 2rem 1.6rem 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

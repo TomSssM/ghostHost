@@ -344,29 +344,23 @@ header {
 
     li {
       @include tomsPerfectLiPosi(4, 3);
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
+      background: #fff;
+      box-shadow: 0px 0px 7px 0px #dbdbdb;
 
       &:nth-child(1) {
         a {
-          border-top: 7px solid $packagesYellow;
+          border-top: 4px solid $packagesYellow;
 
           .icon {
-            width: 3rem;
-            height: 3rem;
+            width: $PackagesIcon;
+            height: $PackagesIcon;
             background: $packagesYellow;
             margin: auto;
             border-radius: 700px;
             overflow: hidden;
             position: relative;
             
-            &:before {
+            &:before, &:after {
               content: "";
               position: absolute;
               width: 50%;
@@ -375,33 +369,122 @@ header {
               top: 0;
               background: #fff;
               z-index: 2;
-            } //task
+            }
+            
+            &:after {
+              width: 100%;
+              top: 50%;
+            }
+
+            .icon--small {
+              width: $PackagesIcon--small;
+              height: $PackagesIcon--small;
+              background: #fff;
+              margin: $PackagesIconLineWidth / 2;
+              border-radius: 700px;
+              position: relative;
+
+              i {
+                color: $packagesYellow;
+                position: absolute;
+                width: 1rem;
+                height: 1rem;
+                top: 50%;
+                left: 50%;
+                margin-top: 1rem / 2 * (-1);
+                margin-left: 1rem / 2 * (-1);
+                z-index: 99;
+              }
+
+              &:before, &:after {
+                content: "";
+                width: ($PackagesIcon - $PackagesIcon--small) / 2;
+                height: ($PackagesIcon - $PackagesIcon--small) / 2;
+                border-radius: 700px;
+                background: $packagesYellow;
+                position: absolute;
+                z-index: 99;
+                left: 50%;
+                margin-left: -1 * $PackagesIconLineWidth / 4;
+                top: -1 * $PackagesIconLineWidth / 2;
+              }
+
+              &:after {
+                right: -1 * $PackagesIconLineWidth / 2;
+                left: auto;
+                top: 50%;
+                margin-top: -1 * $PackagesIconLineWidth / 4;
+              }
+            }
           }
+
+          // h3 {
+          //   text-transform: uppercase;
+          //   line-height: 2.6rem;
+          //   border-bottom: $primaryBorder;
+          //   font-family: $primaryFontFamilyBold;
+          // }
+
+          // .info {
+          //   border-bottom: $primaryBorder;
+
+          //   p {
+          //     margin: 1rem 0;
+          //     text-align: left;
+          //     color: $primaryColor;
+
+          //     span {
+          //       color: $packagesYellow;
+          //       float: right;
+          //     }
+          //   }
+          // }
+
+          // p.price {
+          //   padding: 1.39rem 0 .3rem 0;
+          //   font-family: $primaryFontFamilyBold;
+          //   font-size: 1.39rem;
+
+          //   .dollar {
+          //     font-size: 1rem;
+          //     vertical-align: top;
+          //   }
+
+          //   .mon {
+          //     font-family: $primaryFontFamilyRegular;
+          //     color: #8d8d8d;
+          //     font-size: .8rem;
+          //     vertical-align: bottom;
+          //   }
+          // }
+
+          // .select {
+          //   font-family: $primaryFontFamilyBold;
+          //   text-transform: uppercase;
+          //   padding: 1rem 0 1.8rem;
+          //   border-top: 2.8px solid $packagesYellow;
+          //   width: 60%;
+          //   margin: auto;
+          // }
         }
       }
 
       &:nth-child(2) {
-        a {
-          border-top: 7px solid $packagesGray;
-        }
+        //starts
       }
 
       &:nth-child(3) {
-        a {
-          border-top: 7px solid $packagesOranged;
-        }
+        //starts
       }
 
       &:nth-child(4) {
-        a {
-          border-top: 7px solid $packagesCyan;
-        }
+        //starts
       }
 
       a {
         display: block;
         text-align: center;
-        padding: 1.2rem 1rem;
+        padding: 2rem 1.6rem 0;
       }
     }
   }

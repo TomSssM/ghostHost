@@ -7,13 +7,16 @@ $primaryFontFamilyBold: "latobold", 'Courier New', Courier, monospace;
 $primaryFontFamilyItalic: "latoitalic", 'Courier New', Courier, monospace;
 $primaryFontFamilyHairline: "latohairline", 'Courier New', Courier, monospace;
 $primaryFontFamilyThin: "latothin", 'Courier New', Courier, monospace;
-$primaryBorder: 1px solid #d9d9d9;
-$primaryColor: #d9d9d9;
+$primaryColor: #bebebe;
+$primaryBorder: 1px solid $primaryColor;
 $lilSquare: .4rem;
 $packagesYellow: #f9d423;
 $packagesGray: #7f8c8d;
 $packagesOranged: #f85f40;
 $packagesCyan: #1abc9c;
+$PackagesIcon: 3rem;
+$PackagesIconLineWidth: .70rem;
+$PackagesIcon--small: $PackagesIcon - $PackagesIconLineWidth;
 
 @font-face {
   font-family: 'latoregular';

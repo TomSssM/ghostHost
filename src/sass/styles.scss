@@ -321,7 +321,7 @@ header {
 .packages-block {
   background: url("../../images/packagesBG.jpg") no-repeat 0 -12rem;
   background-size: 100% auto;
-  padding: 4rem 0;
+  padding: 4.9rem 0;
   position: relative;
   overflow: hidden;
 
@@ -347,24 +347,156 @@ header {
       box-shadow: 0px 2px 8px -2px darken($primaryColor, 40%);
       @include transition(.1s);
 
+      a {
+    
+        .icon {
+          width: $PackagesIcon;
+          height: $PackagesIcon;
+          margin: auto;
+          overflow: hidden;
+          position: relative;
+    
+          .wrapper {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            position: absolute;
+          }
+          
+          &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 0;
+            background: #fff;
+            z-index: 2;
+          }
+          
+          &:after {
+            width: 100%;
+          }
+    
+          .icon--small {
+            width: $PackagesIcon--small;
+            height: $PackagesIcon--small;
+            background: #fff;
+            margin: $PackagesIconLineWidth;
+            border-radius: 700px;
+            position: relative;
+    
+            i {
+              position: absolute;
+              width: 1rem;
+              height: 1rem;
+              top: 50%;
+              left: 50%;
+              margin-top: 1rem / 2 * (-1);
+              margin-left: 1rem / 2 * (-1);
+              z-index: 99;
+            }
+    
+            &:before, &:after {
+              content: "";
+              width: $PackagesIconLineWidth;
+              height: $PackagesIconLineWidth;
+              border-radius: 700px;
+              position: absolute;
+              z-index: 99;
+            }
+
+            &:before {
+              left: 50%;
+              margin-left: -1 * $PackagesIconLineWidth / 2;
+              top: -1 * $PackagesIconLineWidth;
+            }
+          }
+        }
+    
+        h3 {
+          text-transform: uppercase;
+          line-height: 2.6rem;
+          border-bottom: $primaryBorder;
+          font-family: $primaryFontFamilyBold;
+        }
+    
+        .info {
+          border-bottom: $primaryBorder;
+    
+          p {
+            margin: 1rem 0;
+            text-align: left;
+            color: $primaryColor;
+    
+            span {
+              float: right;
+            }
+          }
+        }
+    
+        p.price {
+          padding: 1.39rem 0 .3rem 0;
+          font-family: $primaryFontFamilyBold;
+          font-size: 1.39rem;
+    
+          .dollar {
+            font-size: 1rem;
+            vertical-align: top;
+          }
+    
+          .mon {
+            font-family: $primaryFontFamilyRegular;
+            color: #8d8d8d;
+            font-size: .8rem;
+            vertical-align: bottom;
+          }
+        }
+    
+        .select {
+          font-family: $primaryFontFamilyBold;
+          text-transform: uppercase;
+          padding: 1rem 0 1.8rem;
+          width: 60%;
+          margin: auto;
+        }
+      }
+
       &:hover {
         transform: scale(1.02);
       }
 
       &:nth-child(1) {
         @include BIGBoy($packagesYellow, 0, 50%);
+        .icon--small:after {
+          top: 50%;
+          margin-top: -1 * $PackagesIconLineWidth / 2;
+          right: -1 * $PackagesIconLineWidth;
+        }
       }
 
       &:nth-child(2) {
         @include BIGBoy($packagesGray, 0, 100%);
+        .icon--small:after {
+          left: 50%;
+          margin-left: -1 * $PackagesIconLineWidth / 2;
+          bottom: -1 * $PackagesIconLineWidth;
+        }
       }
 
       &:nth-child(3) {
-        @include BIGBoy($packagesOranged, 50%, 100%);
+        @include BIGBoy($packagesOranged, -50%, 100%);
+        .icon--small:after {
+          top: 50%;
+          margin-top: -1 * $PackagesIconLineWidth / 2;
+          left: -1 * $PackagesIconLineWidth;
+        }
       }
 
       &:nth-child(4) {
         @include BIGBoy($packagesCyan, 100%, 100%);
+        .icon--small:after {
+          display: none;        
+        }
       }
 
       a {
@@ -375,4 +507,7 @@ header {
     }
   }
 }
+
+// .information-block {
+// }
 //sass --watch sass:css --style expanded

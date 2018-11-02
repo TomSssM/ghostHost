@@ -15,8 +15,8 @@ $packagesGray: #7f8c8d;
 $packagesOranged: #f85f40;
 $packagesCyan: #1abc9c;
 $PackagesIcon: 3rem;
-$PackagesIconLineWidth: .70rem;
-$PackagesIcon--small: $PackagesIcon - $PackagesIconLineWidth;
+$PackagesIconLineWidth: .35rem;
+$PackagesIcon--small: $PackagesIcon - $PackagesIconLineWidth * 2;
 
 @font-face {
   font-family: 'latoregular';

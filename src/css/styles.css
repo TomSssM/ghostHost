@@ -1,4 +1,4 @@
-header nav:after, .registerPad:after, .table-block .table .row:after, .packages-block ul:after, .information-block .container:after, .information-block .container > ul li ul.lilIcon:after, .circles .container ul:after {
+ul:after, header nav:after, .registerPad:after, .table-block .table .row:after, .packages-block ul:after, .information-block .container:after, .information-block .container > ul li ul.lilIcon:after, .circles .container ul:after, footer .nav:after {
   content: "";
   display: block;
   clear: both;
@@ -738,6 +738,96 @@ header .wrapper .motto--subheader {
 }
 .circles .container ul li:nth-child(4) .circle {
   background: #f1540f;
+}
+
+footer {
+  background: #2a2a2a;
+}
+footer .nav {
+  border-bottom: 1px solid #4a4a4a;
+  position: relative;
+  overflow: hidden;
+}
+footer .nav:before {
+  content: "";
+  width: 8rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: #2a2a2a;
+  opacity: .4;
+  z-index: 9999;
+}
+footer .nav .logo {
+  background: url("../../images/headerLogo.png") no-repeat center center;
+  background-size: 100% auto;
+  height: 4rem;
+  width: 8rem;
+  left: 0;
+  top: 50%;
+  margin-top: -2rem;
+  position: absolute;
+}
+footer .nav ul {
+  width: 40%;
+  float: right;
+}
+footer .nav ul li {
+  float: left;
+  width: 20%;
+  margin: 0 0%;
+}
+footer .nav ul li:first-child {
+  margin-left: 0;
+}
+footer .nav ul li:last-child {
+  margin-right: 0;
+}
+footer .nav ul li a {
+  display: block;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: "latoregular", "Courier New", Courier, monospace;
+  color: #bebebe;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+footer .nav ul li a:hover, footer .nav ul li a.active {
+  color: #fff;
+}
+footer .main--footer {
+  padding: 2rem 0;
+}
+footer .main--footer > li {
+  float: left;
+  width: 33.3333333333%;
+  margin: 0 0%;
+  padding: 1.6rem 0;
+}
+footer .main--footer > li:first-child {
+  margin-left: 0;
+}
+footer .main--footer > li:last-child {
+  margin-right: 0;
+}
+footer .main--footer > li:nth-child(1) p {
+  color: #4a4a4a;
+  font-family: "latoregular", "Courier New", Courier, monospace;
+  width: 80%;
+  float: left;
+  line-height: 1.2;
+}
+footer .main--footer > li:nth-child(1) p.designMan {
+  line-height: 3;
+}
+footer .main--footer > li:nth-child(1) p.designMan span {
+  font-family: "latobold", "Courier New", Courier, monospace;
+}
+footer .main--footer > li:nth-child(2) {
+  border: 1px solid #4a4a4a;
+  border-width: 0 1px 0 1px;
 }
 
 /*# sourceMappingURL=styles.css.map */

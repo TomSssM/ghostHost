@@ -697,6 +697,10 @@ header {
 
 footer {
   background: #2a2a2a;
+  
+  & > * {
+    font-size: .8rem;
+  }
 
   .nav {
     @extend %heightFix;
@@ -738,13 +742,12 @@ footer {
           padding: 2rem 0;
           text-align: center;
           font-family: $primaryFontFamilyRegular;
-          color: $primaryColor;
+          color: #4a4a4a;
           @include transition(.2s);
           text-transform: uppercase;
-          font-size: .9rem;
 
           &:hover, &.active {
-            color: #fff;
+            color: $primaryColor;
           }
         }
       }
@@ -759,13 +762,13 @@ footer {
       padding: 1.6rem 0;
 
       &:nth-child(1) {
-        
+
         p {
           color: #4a4a4a;
           font-family: $primaryFontFamilyRegular;
           width: 80%;
           float: left;
-          line-height: 1.2;
+          line-height: 1.6;
 
           &.designMan {
             line-height: 3;
@@ -780,6 +783,48 @@ footer {
       &:nth-child(2) {
         border: 1px solid #4a4a4a;
         border-width: 0 1px 0 1px;
+
+        ul {
+          width: 30%;
+          
+          &:first-child {
+            margin-left: 20%;
+            float: left;
+          }
+
+          &:last-child {
+            float: right;
+            margin-right: 10%;
+          }
+
+          li {
+
+            a {
+              color: #4a4a4a;
+              font-family: $primaryFontFamilyRegular;
+              padding-bottom: .7rem;
+              display: block;
+              @include transition(.1s);
+              position: relative;
+
+              &:before {
+                content: "?";
+                width: 1rem;
+                position: absolute;
+                left: -1rem;
+              }
+
+              &:hover {
+                color: $primaryColor;
+                padding-left: .3rem;
+              }
+            }
+          }
+        }
+      }
+
+      &::nth-child(3) {
+        //task
       }
     }
   }

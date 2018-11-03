@@ -53,7 +53,7 @@ header {
       width: 60%;
       
       li {
-        @include tomsPerfectLiPosi(6);
+        @include toms-flex-between(6);
         margin-bottom: $discrepancy * (-1);
 
         a {
@@ -270,7 +270,7 @@ header {
       @extend %heightFix;
 
       .cell {
-        @include tomsPerfectLiPosi(4);
+        @include toms-flex-between(4);
         color: $primaryColor;
         font-family: $primaryFontFamilyRegular;
         padding: 1.7rem 0 2rem 0;
@@ -342,7 +342,7 @@ header {
     z-index: 9999;
 
     li {
-      @include tomsPerfectLiPosi(4, 3);
+      @include toms-flex-between(4, 3);
       background: #fff;
       box-shadow: 0px 2px 8px -2px darken($primaryColor, 40%);
       @include transition(.1s);
@@ -508,6 +508,111 @@ header {
   }
 }
 
-// .information-block {
-// }
+.information-block {
+
+  .container {
+    border-top: 2px dotted $primaryColor;
+    padding: 4rem 0;
+    @extend %heightFix;
+
+    section {
+      width: 40%;
+      float: left;
+      height: 100%;
+      margin: 2rem 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        top: 10%;
+        right: -1.7rem;
+        position: absolute;
+        bottom: 10%;
+        border-right: 2px dotted $primaryColor;
+      }
+
+      h1 {
+        font-family: $primaryFontFamilyBold;
+        font-size: 2rem;
+      }
+
+      p {
+        font-family: $primaryFontFamilyRegular;
+        color: $primaryColor;
+        padding: 1rem 0;
+        text-align: justify;
+        line-height: 1.49;
+      }
+    }
+
+    & > ul {
+      width: 52%;
+      padding: 2rem 0;
+      float: right;
+      position: relative;
+      margin-top: 1%;
+
+      li {
+        @include toms-flex-between(3, 8);
+        
+        .portrait {
+          width: 4.7rem;
+          height: 4.7rem;
+          margin: auto;
+          background: url("../../images/info-johny.png") no-repeat center center;
+          background-size: 101% 101%;
+          border-radius: 700px;
+          border: 4px solid $primaryColor;
+          margin-bottom: .4rem;
+        }
+
+        &:nth-child(2) .portrait {
+          background-image: url("../../images/info-john.png");
+        }
+
+        &:nth-child(3) .portrait {
+          background-image: url("../../images/info-johnathan.png");
+        }
+
+        p {
+          text-align: center;
+
+          &.name {
+            font-family: $primaryFontFamilyBold;
+            line-height: 1.7;
+          }
+
+          &.career {
+            color: $primaryColor;
+          }
+        }
+
+        ul.lilIcon {
+          @extend %heightFix;
+          width: 80%;
+          margin: auto;
+
+          li {
+            @include toms-flex-between(3);
+
+            a {
+              display: block;
+              padding: .7rem 0;
+              text-align: center;
+              @include transition(.2s);
+
+              &.active {
+                color: #1f89ba;
+              }
+
+              &:hover {
+                color: #1f89ba;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 //sass --watch sass:css --style expanded

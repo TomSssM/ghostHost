@@ -4,7 +4,7 @@
   transition: all $val $timing;
 }
 
-@mixin tomsPerfectLiPosi($nL: 1, $sp: 0) {
+@mixin toms-flex-between($nL: 1, $sp: 0) {
   $nS: ($nL * 2) - 2;
   float: left;
   width: (100% / $nL) - $sp;

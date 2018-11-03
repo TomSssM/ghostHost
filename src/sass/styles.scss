@@ -531,7 +531,7 @@ header {
         border-right: 2px dotted $primaryColor;
       }
 
-      h1 {
+      h2 {
         font-family: $primaryFontFamilyBold;
         font-size: 2rem;
       }
@@ -612,6 +612,81 @@ header {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.circles {
+  padding: 4.9rem 0;
+
+  .container ul {
+    @extend %heightFix;
+
+    li {
+      @include toms-flex-between(4);
+      padding: 0 0.7rem;
+
+      a {
+        display: block;
+        padding: 1.7rem 1.2rem;
+        transition: .2s all ease-out;
+        text-align: center;
+        border-radius: 40px;
+
+        &:hover {
+          box-shadow: 0 0 12px -1px #acacac;
+        }
+
+        .circle {
+          width: 3rem;
+          height: 3rem;
+          background: #f1c40f;
+          border-radius: 700px;
+          margin: auto;
+          position: relative;
+
+          i {
+            width: 1.6rem;
+            height: 1.6rem;
+            position: absolute;
+            top: 50%;
+            margin-top: -0.6rem;
+            left: 50%;
+            color: #fff;
+            margin-left: -0.8rem;
+            text-align: center;
+            font-size: 1.3rem;
+          }
+        }
+
+        h2 {
+          font-family: $primaryFontFamilyBold;
+          line-height: 2;
+        }
+
+        p {
+          line-height: 1.2;
+          color: $primaryColor;
+        }
+      }
+
+      &:nth-child(2) {
+        .circle {
+          background: #0faff1;
+        }  
+      }
+
+      &:nth-child(3) {
+        .circle {
+          background: #95a5a6;
+        }  
+      }
+
+      &:nth-child(4) {
+        .circle {
+          background: #f1540f;
+        }  
       }
     }
   }

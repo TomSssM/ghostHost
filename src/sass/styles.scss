@@ -245,12 +245,6 @@ header {
       margin: .2rem 0;
       border: 1px solid #d9d9d9;
       border-color: transparent #d9d9d9;
-
-      // &:focus form {
-      //   border-color: darken(#d9d9d9, 30%);
-      // }
-      //task ^^
-      //add onclick events
     }
 
     input[name="3W"] {
@@ -739,7 +733,7 @@ footer {
 
         a {
           display: block;
-          padding: 2rem 0;
+          padding: 1.6rem 0;
           text-align: center;
           font-family: $primaryFontFamilyRegular;
           color: #4a4a4a;
@@ -809,6 +803,7 @@ footer {
 
               &:before {
                 content: "?";
+                //task
                 width: 1rem;
                 position: absolute;
                 left: -1rem;
@@ -823,8 +818,26 @@ footer {
         }
       }
 
-      &::nth-child(3) {
-        //task
+      &:nth-child(3) {
+        
+        a, p {
+          display: block;
+          margin-left: 20%;
+          padding-bottom: .8rem;
+          color: #4a4a4a;
+        }
+
+        a {
+          @include transition(.2s);
+          
+          &:hover {
+            color: $primaryColor;
+          }
+
+          i {
+            padding-right: .4rem;
+          }
+        }
       }
     }
   }

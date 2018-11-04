@@ -788,7 +788,7 @@ footer .nav ul li:last-child {
 }
 footer .nav ul li a {
   display: block;
-  padding: 2rem 0;
+  padding: 1.6rem 0;
   text-align: center;
   font-family: "latoregular", "Courier New", Courier, monospace;
   color: #4a4a4a;
@@ -860,6 +860,22 @@ footer .main--footer > li:nth-child(2) ul li a:before {
 footer .main--footer > li:nth-child(2) ul li a:hover {
   color: #bebebe;
   padding-left: .3rem;
+}
+footer .main--footer > li:nth-child(3) a, footer .main--footer > li:nth-child(3) p {
+  display: block;
+  margin-left: 20%;
+  padding-bottom: .8rem;
+  color: #4a4a4a;
+}
+footer .main--footer > li:nth-child(3) a {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+footer .main--footer > li:nth-child(3) a:hover {
+  color: #bebebe;
+}
+footer .main--footer > li:nth-child(3) a i {
+  padding-right: .4rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

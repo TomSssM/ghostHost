@@ -677,6 +677,83 @@ header .wrapper .motto--subheader {
   color: #1f89ba;
 }
 
+.slider {
+  position: relative;
+}
+.slider .slide {
+  padding: 1rem 0;
+  background: url("../../images/sliderBG.jpg") no-repeat center center;
+  background-size: cover;
+  display: none;
+  min-height: 10rem;
+}
+.slider .slide p {
+  font-family: "latothin", "Courier New", Courier, monospace;
+  color: #fff;
+  width: 40%;
+  margin: auto;
+  padding: .7rem 0 3rem 0;
+  text-align: center;
+  line-height: 1.6;
+}
+.slider .slide:nth-child(1) {
+  display: block;
+  background-position-y: 70%;
+}
+.slider .slide:nth-child(2) {
+  background-position-y: top;
+}
+.slider .slide:nth-child(3) {
+  background-position-y: bottom;
+}
+.slider .holder {
+  width: 3.2rem;
+  bottom: 3rem;
+  left: 50%;
+  position: absolute;
+  margin-bottom: .25rem;
+  margin-right: -0.4rem;
+  margin-left: 0.4rem;
+}
+.slider .holder li {
+  float: left;
+  width: 33.3333333333%;
+  margin: 0 0%;
+}
+.slider .holder li:first-child {
+  margin-left: 0;
+}
+.slider .holder li:last-child {
+  margin-right: 0;
+}
+.slider .holder li span {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 700px;
+  background: transparent;
+  display: block;
+  border: 1px solid #fff;
+  margin: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.slider .holder li span:hover, .slider .holder li span.active {
+  cursor: pointer;
+  background: #fff;
+}
+.slider #specialP {
+  width: 10rem;
+  color: #fff;
+  font-family: "latobold", "Courier New", Courier, monospace;
+  position: absolute;
+  text-align: right;
+  border-right: 1px solid #fff;
+  padding-right: 0.4rem;
+  left: 50%;
+  margin-left: -10rem;
+  bottom: 3rem;
+}
+
 .circles {
   padding: 4.9rem 0;
 }
@@ -758,7 +835,7 @@ footer .nav:before {
   position: absolute;
   left: 0;
   background: #2a2a2a;
-  opacity: .4;
+  opacity: .8;
   z-index: 9999;
 }
 footer .nav .logo {

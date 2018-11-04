@@ -223,6 +223,7 @@ header {
     :focus::placeholder {
       opacity: 0;
     }
+    //task make form border darken on focus add onclick events
 
     & > * {
       outline: none;
@@ -614,6 +615,84 @@ header {
   }
 }
 
+.slider {
+  position: relative;
+
+  .slide {
+    padding: 1rem 0;
+    background: url("../../images/sliderBG.jpg") no-repeat center center;
+    background-size: cover;
+    display: none;
+    min-height: 10rem;
+
+    p {
+      font-family: $primaryFontFamilyThin;
+      color: #fff;
+      width: 40%;
+      margin: auto;
+      padding: .7rem 0 3rem 0;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    &:nth-child(1) {
+      display: block;
+      background-position-y: 70%;
+    }
+
+    &:nth-child(2) {
+      background-position-y: top;
+    }
+
+    &:nth-child(3) {
+      background-position-y: bottom;
+    }
+  }
+
+  .holder {
+    width: 3.2rem;
+    bottom: 3rem;
+    left: 50%;
+    position: absolute;
+    margin-bottom: .25rem;
+    margin-right: $MoveMenuandSpecialP * (-1);
+    margin-left: $MoveMenuandSpecialP;
+
+    li {
+      @include toms-flex-between(3);
+      
+      span {
+        width: .5rem;
+        height: .5rem;
+        border-radius: 700px;
+        background: transparent;
+        display: block;
+        border: 1px solid #fff;
+        margin: auto;
+        @include transition(.2s);
+
+        &:hover, &.active {
+          cursor: pointer;
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  #specialP {
+    width: 10rem;
+    color: #fff;
+    font-family: $primaryFontFamilyBold;
+    position: absolute;
+    text-align: right;
+    border-right: 1px solid #fff;
+    padding-right: $MoveMenuandSpecialP;
+    left: 50%;
+    margin-left: -10rem;
+    bottom: 3rem;
+  }
+}
+
 .circles {
   padding: 4.9rem 0;
 
@@ -709,7 +788,7 @@ footer {
       position: absolute;
       left: 0;
       background: #2a2a2a;
-      opacity: .4;
+      opacity: .8;
       z-index: 9999;
     }
 

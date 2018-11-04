@@ -7,10 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>GhostHost</title>
   <!--task-->
+  <!--task add mobile-->
+  <!--task add issues for the sass task-->
   <!-- <link rel="icon" sizes="192x192" href="/path/to/icon.png">
   <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
   <link rel="mask-icon" href="/path/to/icon.svg" color="blue"> -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/styles.css">
@@ -209,8 +212,23 @@
       </ul>
     </div>
   </div>
-  <!-- <div class="slider"></div> -->
-  <!--task-->
+  <div class="slider">
+    <div class="slide">
+      <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Menectetur adipisicing elit. Assumenda cum quis. Colnsectetur adipisicing elit."</p>
+    </div>
+    <div class="slide">
+        <p>"Cupcake ipsum dolor sit amet pastry biscuit. Dragée tiramisu bonbon halvah. Cake pudding jelly beans candy canes oat cake. Gummi bears macaroon danish chocolate cake jelly beans powder"</p>
+    </div>
+    <div class="slide">
+        <p>"Marshmallow biscuit ice cream gummi bears."</p>
+    </div>
+    <ul class="holder">
+      <li><span class="dot" onclick="showSlides(0)"></span></li>
+      <li><span class="dot" onclick="showSlides(1)"></span></li>
+      <li><span class="dot" onclick="showSlides(2)"></span></li>
+    </ul>
+    <p id="specialP"></p>
+  </div>
   <div class="circles">
     <div class="container">
       <ul>
@@ -256,7 +274,6 @@
   <footer>
     <div class="container">
       <div class="nav">
-        <!--task^^-->
         <div class="logo"></div>
         <ul>
           <li><a href="#" class="active">Home</a></li>

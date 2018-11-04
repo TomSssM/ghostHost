@@ -1,4 +1,4 @@
-ul:after, header nav:after, .registerPad:after, .table-block .table .row:after, .packages-block ul:after, .information-block .container:after, .information-block .container > ul li ul.lilIcon:after, .circles .container ul:after, footer .nav:after {
+ul:after, header nav:after, .registerPad:after, .table-block .table .row:after, .packages-block ul:after, .information-block .container:after, .information-block .container > ul li ul.lilIcon:after, .circles .container ul:after, footer nav:after {
   content: "";
   display: block;
   clear: both;
@@ -685,7 +685,7 @@ header .wrapper .motto--subheader {
   background: url("../../images/sliderBG.jpg") no-repeat center center;
   background-size: cover;
   display: none;
-  min-height: 10rem;
+  min-height: 12rem;
 }
 .slider .slide p {
   font-family: "latothin", "Courier New", Courier, monospace;
@@ -823,12 +823,12 @@ footer {
 footer > * {
   font-size: .8rem;
 }
-footer .nav {
+footer nav {
   border-bottom: 1px solid #4a4a4a;
   position: relative;
   overflow: hidden;
 }
-footer .nav:before {
+footer nav:before {
   content: "";
   width: 8rem;
   height: 100%;
@@ -838,7 +838,7 @@ footer .nav:before {
   opacity: .8;
   z-index: 9999;
 }
-footer .nav .logo {
+footer nav .logo {
   background: url("../../images/headerLogo.png") no-repeat center center;
   background-size: 100% auto;
   height: 4rem;
@@ -848,22 +848,22 @@ footer .nav .logo {
   margin-top: -2rem;
   position: absolute;
 }
-footer .nav ul {
+footer nav ul {
   width: 40%;
   float: right;
 }
-footer .nav ul li {
+footer nav ul li {
   float: left;
   width: 20%;
   margin: 0 0%;
 }
-footer .nav ul li:first-child {
+footer nav ul li:first-child {
   margin-left: 0;
 }
-footer .nav ul li:last-child {
+footer nav ul li:last-child {
   margin-right: 0;
 }
-footer .nav ul li a {
+footer nav ul li a {
   display: block;
   padding: 1.6rem 0;
   text-align: center;
@@ -873,7 +873,7 @@ footer .nav ul li a {
   transition: all 0.2s ease-in-out;
   text-transform: uppercase;
 }
-footer .nav ul li a:hover, footer .nav ul li a.active {
+footer nav ul li a:hover, footer nav ul li a.active {
   color: #bebebe;
 }
 footer .main--footer {
@@ -953,6 +953,83 @@ footer .main--footer > li:nth-child(3) a:hover {
 }
 footer .main--footer > li:nth-child(3) a i {
   padding-right: .4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header nav .logo, header nav ul.main, header nav ul.main li {
+    width: 100%;
+    float: none;
+    height: 2rem;
+  }
+  header nav ul.main li {
+    margin: 0;
+  }
+  header nav ul.main li a {
+    position: static;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: #4d4d4d;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  header nav ul.main li a:hover, header nav ul.main li a.active {
+    color: #fff;
+  }
+  header nav ul.main li a:before {
+    display: none;
+  }
+  header nav .logo {
+    background-size: auto 100%;
+    position: static;
+    margin: 0;
+  }
+
+  .packages-block ul li {
+    width: 80%;
+    margin: 2rem auto !important;
+    float: none;
+  }
+
+  .table-block form {
+    display: block;
+  }
+  .table-block form input#threeW, .table-block form select#host, .table-block form input#domainName {
+    width: 100%;
+    float: none;
+    text-align: center;
+    border: none;
+  }
+  .table-block form select#host {
+    width: 40%;
+    margin: auto;
+  }
+
+  .table-block .table .row:nth-child(2) .cell {
+    border: none;
+  }
+  .table-block .table .row:nth-child(2) .cell:last-child {
+    border: none;
+  }
+  .table-block .table .row .cell {
+    width: 100%;
+    float: none;
+    border: none;
+  }
+  .table-block .table .row .cell:last-child {
+    border-bottom: 1px solid #bebebe;
+  }
+
+  .circles .container ul li {
+    width: 70%;
+    float: none;
+    margin: auto !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

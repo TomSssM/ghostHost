@@ -623,7 +623,7 @@ header {
     background: url("../../images/sliderBG.jpg") no-repeat center center;
     background-size: cover;
     display: none;
-    min-height: 10rem;
+    min-height: 12rem;
 
     p {
       font-family: $primaryFontFamilyThin;
@@ -775,7 +775,7 @@ footer {
     font-size: .8rem;
   }
 
-  .nav {
+  nav {
     @extend %heightFix;
     border-bottom: 1px solid #4a4a4a;
     position: relative;
@@ -919,5 +919,104 @@ footer {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  header nav {
+
+    .logo, ul.main, ul.main li {
+      width: 100%;
+      float: none;
+      height: 2rem;
+    }
+  
+    ul.main li {
+      margin: 0;
+  
+      a {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        color: darken(#fff, 70%);
+        @include transition(.2s);
+  
+        &:hover, &.active {
+          color: #fff;
+        }
+  
+        &:before {
+          display: none;
+        }
+      }
+    }
+  
+    .logo {
+      background-size: auto 100%;
+      position: static;
+      margin: 0;
+    }
+  }
+  
+  .packages-block ul li {
+    width: 80%;
+    margin: 2rem auto !important;
+    float: none;
+  }
+
+  .table-block form {
+    display: block;
+
+    input#threeW, select#host, input#domainName {
+      width: 100%;
+      float: none;
+      text-align: center;
+      border: none;
+    }
+
+    select#host {
+      width: 40%;
+      margin: auto;
+    }
+  }
+
+  .table-block .table {
+
+    .row {
+
+      &:nth-child(2) {
+        .cell {
+          border: none;
+
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+
+      .cell {
+        width: 100%;
+        float: none;
+        border: none;
+
+        &:last-child {
+          border-bottom: $primaryBorder;
+        }
+      }
+    }
+  }
+
+  .circles .container ul li {
+    width: 70%;
+    float: none;
+    margin: auto !important;
   }
 }

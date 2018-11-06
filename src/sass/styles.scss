@@ -4,7 +4,8 @@
 
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 ul {
   @extend %heightFix;
@@ -53,10 +54,13 @@ header {
 
     ul.main {
       float: right;
-      width: 60%;
+      width: auto;
       
       li {
-        @include toms-flex-between(6);
+        // @include toms-flex-between(6);
+        width: auto;
+        float: left;
+        padding-left: 1.7rem;
         margin-bottom: $discrepancy * (-1);
 
         a {
@@ -76,6 +80,7 @@ header {
             bottom: 0;
             width: 0;
             left: 50%;
+            -webkit-transition: all .2s ease-out;
             transition: all .2s ease-out;
             background: #fff;
             height: $discrepancy;
@@ -122,10 +127,12 @@ header {
     width: 100%;
     margin-right: -50%;
     float: left;
-    transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+            transform: skewX(-20deg);
 
     &.login {
-      transform: none;
+      -webkit-transform: none;
+              transform: none;
 
       a {
         background: #21424a;
@@ -135,7 +142,8 @@ header {
         }
 
         &:before {
-          transform: skewX(-20deg);
+          -webkit-transform: skewX(-20deg);
+                  transform: skewX(-20deg);
         }
       }
     }
@@ -150,7 +158,8 @@ header {
         }
 
         p {
-          transform: skewX(20deg);
+          -webkit-transform: skewX(20deg);
+                  transform: skewX(20deg);
           margin-left: 0;
         }
       }
@@ -161,6 +170,7 @@ header {
       padding: 2.4rem 0;
       position: relative;
       overflow: hidden;
+      -webkit-transition: all .3s;
       transition: all .3s;
       
       &:before {
@@ -168,6 +178,7 @@ header {
         position: absolute;
         width: 30%;
         height: 100%;
+        background: -webkit-gradient(linear, left top, right top, from(#ffffff00), color-stop(#ffffff56), to(#ffffff00));
         background: linear-gradient(to right, #ffffff00, #ffffff56, #ffffff00);
         top: 0;
         left: 60%;
@@ -176,13 +187,12 @@ header {
 
       &:hover:before {
         left: -100%;
+        -webkit-transition: all .7s ease-out;
         transition: all .7s ease-out;
       }
   
       p {
         width: 30%;
-        // float: left;
-        // task ^^
         text-align: center;
         margin-left: 20%;
         font-family: $primaryFontFamilyBold;
@@ -213,12 +223,34 @@ header {
     width: 100%;
     border: $primaryBorder;
     margin: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row nowrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    @include transition(.1s);
+
+    ::-webkit-input-placeholder {
+      opacity: 1;
+      @include transition(.2s);
+    }
+
+    :-ms-input-placeholder {
+      opacity: 1;
+      @include transition(.2s);
+    }
 
     ::placeholder {
       opacity: 1;
       @include transition(.2s);
+    }
+    :focus::-webkit-input-placeholder {
+      opacity: 0;
+    }
+    :focus:-ms-input-placeholder {
+      opacity: 0;
     }
     :focus::placeholder {
       opacity: 0;
@@ -241,7 +273,9 @@ header {
       text-align: left;
       color: #b4b4b4;
       font-family: $primaryFontFamilyBold;
-      flex: 1;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
       padding: .4rem 1rem;
       margin: .2rem 0;
       border: 1px solid #d9d9d9;
@@ -342,7 +376,8 @@ header {
     li {
       @include toms-flex-between(4, 3);
       background: #fff;
-      box-shadow: 0px 2px 8px -2px darken($primaryColor, 40%);
+      -webkit-box-shadow: 0px 2px 8px -2px darken($primaryColor, 40%);
+              box-shadow: 0px 2px 8px -2px darken($primaryColor, 40%);
       @include transition(.1s);
 
       a {
@@ -460,7 +495,8 @@ header {
       }
 
       &:hover {
-        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+                transform: scale(1.02);
       }
 
       &:nth-child(1) {
@@ -628,7 +664,7 @@ header {
     p {
       font-family: $primaryFontFamilyThin;
       color: #fff;
-      width: 40%;
+      width: 60%;
       margin: auto;
       padding: .7rem 0 3rem 0;
       text-align: center;
@@ -706,12 +742,14 @@ header {
       a {
         display: block;
         padding: 1.7rem 1.2rem;
+        -webkit-transition: .2s all ease-out;
         transition: .2s all ease-out;
         text-align: center;
         border-radius: 40px;
 
         &:hover {
-          box-shadow: 0 0 12px -1px #acacac;
+          -webkit-box-shadow: 0 0 12px -1px #acacac;
+                  box-shadow: 0 0 12px -1px #acacac;
         }
 
         .circle {
@@ -881,8 +919,8 @@ footer {
               position: relative;
 
               &:before {
-                content: "?";
-                //task
+                content: "\f105";
+                font-family: FontAwesome;
                 width: 1rem;
                 position: absolute;
                 left: -1rem;
@@ -924,7 +962,85 @@ footer {
 
 @media screen and (max-width: 1024px) {
   .container {
-    width: 100%;
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .container--half {
+    max-width: 80%;
+  }
+
+  .packages-block {
+
+    .container {
+      max-width: 70%;
+      
+      ul li {
+        margin: 1%;
+        width: 48%;
+      }
+    }
+  }
+
+  .information-block .container {
+    width: 80%;
+
+    section {
+      width: 100%;
+      float: none;
+      
+      &:after {
+        display: none;
+      }  
+
+      p {
+        @include nofloat();
+      }
+    }
+
+    & > ul {
+      width: 100%;
+      float: none;
+    }  
+  }
+
+  .slider .slide p {
+    width: 88%;
+  }
+
+  body .circles .container ul {
+
+    li {
+      width: 48%;
+      margin: 1%;
+    }
+  }
+
+  footer {
+
+    nav ul {
+      width: 70%;
+    }
+
+    ul.main--footer > li {
+      width: 100%;
+      
+      &:first-child p, &:last-child > * {
+        width: 70%;
+        margin: auto;
+        float: none;
+      }
+
+      &:nth-child(2) {
+        border: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .packages-block .container {
+    max-width: 100%;
   }
 }
 
@@ -965,11 +1081,9 @@ footer {
       margin: 0;
     }
   }
-  
-  .packages-block ul li {
-    width: 80%;
-    margin: 2rem auto !important;
-    float: none;
+
+  .registerPad li a p, .registerPad li.register a p {
+    margin-left: 10%;
   }
 
   .table-block form {
@@ -993,6 +1107,7 @@ footer {
     .row {
 
       &:nth-child(2) {
+        
         .cell {
           border: none;
 
@@ -1014,9 +1129,115 @@ footer {
     }
   }
 
-  .circles .container ul li {
+  body .circles .container ul li {
     width: 70%;
     float: none;
-    margin: auto !important;
+    margin: auto;
+
+    &:first-child, &:last-child {
+      margin: auto;      
+    }
+  }
+
+  .slider .slide {
+    height: 16rem;
+  }
+
+  footer {
+
+    nav {
+
+      &:before {
+        width: 100%;
+        height: 3rem;
+      }
+
+      .logo {
+        width: 100%;
+        position: static;
+        height: 3rem;
+        margin: 0;
+        background-size: auto 70%;
+      }
+
+      ul {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+
+  .packages-block .container ul li {
+    width: 98%;
+    margin: 2rem auto;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 430px) {
+
+  .information-block .container > ul {
+
+    & > li {
+      width: 100%;
+      float: none;
+      margin: 0;
+      padding-top: 1rem;
+
+      ul.lilIcon {
+        width: 40%;
+      }
+    }
+  }
+
+  body .circles .container ul {
+
+    li {
+      width: 90%;
+    }
+  }
+
+  footer {
+
+    .container {
+      padding: 0;
+    }
+
+    nav ul li {
+      width: 100%;
+      float: none;
+
+      a {
+        padding: 1rem 0;
+      }
+    }
+
+    ul.main--footer > li {
+      
+      &:first-child p, &:last-child > * {
+        width: 90%;
+      }
+    }
+
+    ul.main--footer > li:nth-child(2) {
+      padding: 0;
+  
+      ul:first-child, ul:last-child {
+        float: none;
+        margin: 0 auto;
+        width: 90%;
+
+        li {
+          margin-left: 1rem;
+
+          a {
+            padding-bottom: 1rem;
+          }
+        }
+      }
+    }
   }
 }

@@ -35,6 +35,7 @@ ul:after, header nav:after, .registerPad:after, .table-block .table .row:after, 
   font-style: normal;
 }
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -80,19 +81,13 @@ header nav .logo {
 }
 header nav ul.main {
   float: right;
-  width: 60%;
+  width: auto;
 }
 header nav ul.main li {
+  width: auto;
   float: left;
-  width: 16.6666666667%;
-  margin: 0 0%;
+  padding-left: 1.7rem;
   margin-bottom: -1px;
-}
-header nav ul.main li:first-child {
-  margin-left: 0;
-}
-header nav ul.main li:last-child {
-  margin-right: 0;
 }
 header nav ul.main li a {
   font-size: .8em;
@@ -111,6 +106,7 @@ header nav ul.main li a:before {
   bottom: 0;
   width: 0;
   left: 50%;
+  -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
   background: #fff;
   height: 1px;
@@ -146,9 +142,11 @@ header .wrapper .motto--subheader {
   width: 100%;
   margin-right: -50%;
   float: left;
+  -webkit-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
 .registerPad li.login {
+  -webkit-transform: none;
   transform: none;
 }
 .registerPad li.login a {
@@ -158,6 +156,7 @@ header .wrapper .motto--subheader {
   background: #2c5863;
 }
 .registerPad li.login a:before {
+  -webkit-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
 .registerPad li.register a {
@@ -167,6 +166,7 @@ header .wrapper .motto--subheader {
   background: #37c87e;
 }
 .registerPad li.register a p {
+  -webkit-transform: skewX(20deg);
   transform: skewX(20deg);
   margin-left: 0;
 }
@@ -175,6 +175,7 @@ header .wrapper .motto--subheader {
   padding: 2.4rem 0;
   position: relative;
   overflow: hidden;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 .registerPad li a:before {
@@ -182,12 +183,14 @@ header .wrapper .motto--subheader {
   position: absolute;
   width: 30%;
   height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff00), color-stop(#ffffff56), to(#ffffff00));
   background: linear-gradient(to right, #ffffff00, #ffffff56, #ffffff00);
   top: 0;
   left: 60%;
 }
 .registerPad li a:hover:before {
   left: -100%;
+  -webkit-transition: all .7s ease-out;
   transition: all .7s ease-out;
 }
 .registerPad li a p {
@@ -218,13 +221,36 @@ header .wrapper .motto--subheader {
   width: 100%;
   border: 1px solid #bebebe;
   margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.table-block form ::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.table-block form :-ms-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .table-block form ::placeholder {
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+.table-block form :focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.table-block form :focus:-ms-input-placeholder {
+  opacity: 0;
 }
 .table-block form :focus::placeholder {
   opacity: 0;
@@ -243,6 +269,8 @@ header .wrapper .motto--subheader {
   text-align: left;
   color: #b4b4b4;
   font-family: "latobold", "Courier New", Courier, monospace;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   padding: .4rem 1rem;
   margin: .2rem 0;
@@ -333,6 +361,7 @@ header .wrapper .motto--subheader {
   width: 22%;
   margin: 0 2%;
   background: #fff;
+  -webkit-box-shadow: 0px 2px 8px -2px #585858;
   box-shadow: 0px 2px 8px -2px #585858;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
@@ -439,6 +468,7 @@ header .wrapper .motto--subheader {
   margin: auto;
 }
 .packages-block ul li:hover {
+  -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
 .packages-block ul li:nth-child(1) a {
@@ -690,7 +720,7 @@ header .wrapper .motto--subheader {
 .slider .slide p {
   font-family: "latothin", "Courier New", Courier, monospace;
   color: #fff;
-  width: 40%;
+  width: 60%;
   margin: auto;
   padding: .7rem 0 3rem 0;
   text-align: center;
@@ -772,11 +802,13 @@ header .wrapper .motto--subheader {
 .circles .container ul li a {
   display: block;
   padding: 1.7rem 1.2rem;
+  -webkit-transition: .2s all ease-out;
   transition: .2s all ease-out;
   text-align: center;
   border-radius: 40px;
 }
 .circles .container ul li a:hover {
+  -webkit-box-shadow: 0 0 12px -1px #acacac;
   box-shadow: 0 0 12px -1px #acacac;
 }
 .circles .container ul li a .circle {
@@ -929,7 +961,8 @@ footer .main--footer > li:nth-child(2) ul li a {
   position: relative;
 }
 footer .main--footer > li:nth-child(2) ul li a:before {
-  content: "?";
+  content: "\f105";
+  font-family: FontAwesome;
   width: 1rem;
   position: absolute;
   left: -1rem;
@@ -957,7 +990,68 @@ footer .main--footer > li:nth-child(3) a i {
 
 @media screen and (max-width: 1024px) {
   .container {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+
+  .container--half {
+    max-width: 80%;
+  }
+
+  .packages-block .container {
+    max-width: 70%;
+  }
+  .packages-block .container ul li {
+    margin: 1%;
+    width: 48%;
+  }
+
+  .information-block .container {
+    width: 80%;
+  }
+  .information-block .container section {
     width: 100%;
+    float: none;
+  }
+  .information-block .container section:after {
+    display: none;
+  }
+  .information-block .container section p {
+    width: 100%;
+    float: none;
+  }
+  .information-block .container > ul {
+    width: 100%;
+    float: none;
+  }
+
+  .slider .slide p {
+    width: 88%;
+  }
+
+  body .circles .container ul li {
+    width: 48%;
+    margin: 1%;
+  }
+
+  footer nav ul {
+    width: 70%;
+  }
+  footer ul.main--footer > li {
+    width: 100%;
+  }
+  footer ul.main--footer > li:first-child p, footer ul.main--footer > li:last-child > * {
+    width: 70%;
+    margin: auto;
+    float: none;
+  }
+  footer ul.main--footer > li:nth-child(2) {
+    border: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .packages-block .container {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -990,10 +1084,8 @@ footer .main--footer > li:nth-child(3) a i {
     margin: 0;
   }
 
-  .packages-block ul li {
-    width: 80%;
-    margin: 2rem auto !important;
-    float: none;
+  .registerPad li a p, .registerPad li.register a p {
+    margin-left: 10%;
   }
 
   .table-block form {
@@ -1025,10 +1117,83 @@ footer .main--footer > li:nth-child(3) a i {
     border-bottom: 1px solid #bebebe;
   }
 
-  .circles .container ul li {
+  body .circles .container ul li {
     width: 70%;
     float: none;
-    margin: auto !important;
+    margin: auto;
+  }
+  body .circles .container ul li:first-child, body .circles .container ul li:last-child {
+    margin: auto;
+  }
+
+  .slider .slide {
+    height: 16rem;
+  }
+
+  footer nav:before {
+    width: 100%;
+    height: 3rem;
+  }
+  footer nav .logo {
+    width: 100%;
+    position: static;
+    height: 3rem;
+    margin: 0;
+    background-size: auto 70%;
+  }
+  footer nav ul {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (max-width: 520px) {
+  .packages-block .container ul li {
+    width: 98%;
+    margin: 2rem auto;
+    float: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .information-block .container > ul > li {
+    width: 100%;
+    float: none;
+    margin: 0;
+    padding-top: 1rem;
+  }
+  .information-block .container > ul > li ul.lilIcon {
+    width: 40%;
+  }
+
+  body .circles .container ul li {
+    width: 90%;
+  }
+
+  footer .container {
+    padding: 0;
+  }
+  footer nav ul li {
+    width: 100%;
+    float: none;
+  }
+  footer nav ul li a {
+    padding: 1rem 0;
+  }
+  footer ul.main--footer > li:first-child p, footer ul.main--footer > li:last-child > * {
+    width: 90%;
+  }
+  footer ul.main--footer > li:nth-child(2) {
+    padding: 0;
+  }
+  footer ul.main--footer > li:nth-child(2) ul:first-child, footer ul.main--footer > li:nth-child(2) ul:last-child {
+    float: none;
+    margin: 0 auto;
+    width: 90%;
+  }
+  footer ul.main--footer > li:nth-child(2) ul:first-child li, footer ul.main--footer > li:nth-child(2) ul:last-child li {
+    margin-left: 1rem;
+  }
+  footer ul.main--footer > li:nth-child(2) ul:first-child li a, footer ul.main--footer > li:nth-child(2) ul:last-child li a {
+    padding-bottom: 1rem;
   }
 }
 

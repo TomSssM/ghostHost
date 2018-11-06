@@ -64,6 +64,11 @@
   } 
 }
 
+@mixin nofloat() {
+  width: 100%;
+  float: none;
+}
+
 //placeholders
 %heightFix {
   &:after {

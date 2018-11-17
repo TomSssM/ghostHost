@@ -23,6 +23,12 @@ header {
   background-size: cover;
   position: relative;
 
+  & > h1:nth-child(1) {
+    color: #fff;
+    position: absolute;
+    left: -100%;
+  }
+
   .container > *, & > * {
     position: relative;
     z-index: 999;

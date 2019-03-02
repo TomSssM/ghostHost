@@ -1,4 +1,8 @@
 .sass-cache/
+.idea
+node_modules
+*.bundle.js
+*.log
 # *.css.map
 # *.sass.map
 # *.scss.map

@@ -1,0 +1,61 @@
+$containerMax: 1024px;
+$gray: #686868;
+$lightORdarkAmount: 12;
+$discrepancy: 1px;
+$primaryFontFamilyRegular: "latoregular", 'Courier New', Courier, monospace;
+$primaryFontFamilyBold: "latobold", 'Courier New', Courier, monospace;
+$primaryFontFamilyItalic: "latoitalic", 'Courier New', Courier, monospace;
+$primaryFontFamilyHairline: "latohairline", 'Courier New', Courier, monospace;
+$primaryFontFamilyThin: "latothin", 'Courier New', Courier, monospace;
+$primaryColor: #bebebe;
+$primaryBorder: 1px solid $primaryColor;
+$lilSquare: .4rem;
+$packagesYellow: #f9d423;
+$packagesGray: #7f8c8d;
+$packagesOranged: #f85f40;
+$packagesCyan: #1abc9c;
+$PackagesIcon: 3rem;
+$PackagesIconLineWidth: .35rem;
+$PackagesIcon--small: $PackagesIcon - $PackagesIconLineWidth * 2;
+$MoveMenuandSpecialP: .4rem;
+
+@font-face {
+  font-family: 'latoregular';
+  src: url("../../font/lato-regular-webfont.woff2") format('woff2'),
+       url("../../font/lato-regular-webfont.woff") format('woff'),
+       url("../../font/lato-regular-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latobold';
+  src: url('../../font/lato-bold-webfont.woff2') format('woff2'),
+       url('../../font/lato-bold-webfont.woff') format('woff'),
+       url('../../font/lato-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latoitalic';
+  src: url('../../font/lato-italic-webfont.woff2') format('woff2'),
+       url('../../font/lato-italic-webfont.woff') format('woff'),
+       url('../../font/lato-italic-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latohairline';
+  src: url('../../font/lato-hairline-webfont.woff2') format('woff2'),
+       url('../../font/lato-hairline-webfont.woff') format('woff'),
+       url('../../font/lato-hairline-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latothin';
+  src: url('../../font/lato-thin-webfont.woff2') format('woff2'),
+       url('../../font/lato-thin-webfont.woff') format('woff'),
+       url('../../font/lato-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
